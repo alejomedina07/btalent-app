@@ -1,4 +1,4 @@
 
 
-export * from './NavBar'
+export * from './nav/NavBar.jsx'
 export * from './SideBar'

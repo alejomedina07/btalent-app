@@ -1,8 +1,5 @@
-import { breadcrumbsFormUser, FormUserComponent } from '../components/index.js';
-import { AdminLaout } from '../../layout/AdminLaout.jsx';
-import { BoxLayout } from '../../layout/BoxLayout.jsx';
-import { BreadcrumbsComponent } from '../components/BreadcrumbsComponent.jsx';
-
+import { BreadcrumbsComponent, breadcrumbsFormUser, FormUserComponent } from '../components';
+import { AdminLaout, BoxLayout } from '../../layout';
 
 export const UserFormView = () => {
   return (

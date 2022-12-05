@@ -1,5 +1,5 @@
-import { Grid, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
 import { Link } from 'react-router-dom';
+import { Grid, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
 
 export const NavBarItem = ( { option } ) => {
   return (
@@ -12,7 +12,6 @@ export const NavBarItem = ( { option } ) => {
           <Grid container>
             <ListItemText primary={option.name}/>
           </Grid>
-
         </ListItemButton>
       </ListItem>
     </Link>

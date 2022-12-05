@@ -1,18 +1,17 @@
-import { Button, Grid, TextField } from '@mui/material';
 import { useDispatch } from 'react-redux';
+import { Button, Grid, TextField } from '@mui/material';
 import { addUser } from '../../../store/slices/user/userSlice.js';
 import { useForm } from '../../../hooks/useForm.js';
-
 
 
 export const FormUserComponent = () => {
 
   const dispatch = useDispatch()
   const { name, last_name, company, email, onInputChange } = useForm({
-    name: 'usuario123',
-    last_name: '123456',
-    company:'ejemplo',
-    email: 'ejemplo@ejemplo.com'
+    name: '',
+    last_name: '',
+    company:'',
+    email: ''
   })
 
   const submit = ( event )=> {

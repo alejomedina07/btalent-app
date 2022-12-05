@@ -1,8 +1,5 @@
-import { AdminLaout } from '../../layout/AdminLaout.jsx';
-import { FormUserComponent, ListUserComponent } from '../components';
-import { BreadcrumbsComponent } from '../components/BreadcrumbsComponent.jsx';
-import { breadcrumbsListUser } from '../components';
-import { BoxLayout } from '../../layout/BoxLayout.jsx';
+import { BreadcrumbsComponent, breadcrumbsListUser, FormUserComponent, ListUserComponent } from '../components';
+import { AdminLaout, BoxLayout } from '../../layout';
 
 
 export const UserListView = () => {

@@ -1,13 +1,14 @@
 import * as React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { Button, Grid, Typography } from '@mui/material';
-import { DataGrid } from '@mui/x-data-grid';
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogActions from '@mui/material/DialogActions';
-import { useDispatch, useSelector } from 'react-redux';
+import { DataGrid, GridToolbar } from '@mui/x-data-grid';
+
 import { removeUser } from '../../../store/slices/user/userSlice.js';
 
 const columns = [
@@ -39,9 +40,7 @@ export const ListUserComponent = () => {
   };
 
   const handleRemove = () => {
-
     dispatch( removeUser(deleteIds) )
-
     setOpen(false);
   };
 
@@ -49,14 +48,12 @@ export const ListUserComponent = () => {
     setDeleteIds(ids)
   }
 
-
   return (
     <Grid container>
       {/*<DialogConfirmDelete open={open} handleClickOpen={handleClickOpen} handleClose={handleClose}/>*/}
       <div>
         <Dialog
-          open={open}
-          onClose={handleClose}
+          open={open} onClose={handleClose}
           aria-labelledby="alert-dialog-title"
           aria-describedby="alert-dialog-description"
         >
@@ -97,9 +94,21 @@ export const ListUserComponent = () => {
             rowsPerPageOptions={[5, 10, 20]}
             checkboxSelection
             onSelectionModelChange={changeCheckBoxesSelection}
+            components={{
+              Toolbar: GridToolbar,
+            }}
+            localeText={{
+              toolbarColumns: 'Columnas',
+              toolbarFilters: 'Filtros',
+              toolbarDensity: 'Tamaño',
+              toolbarExport: 'Exportar',
+              toolbarDensityLabel: 'Size',
+              toolbarDensityCompact: 'Compacto',
+              toolbarDensityStandard: 'Medio',
+              toolbarDensityComfortable: 'Largo',
+            }}
           />
         </div>
-
       </Grid>
     </Grid>
   );

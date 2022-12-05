@@ -1,7 +1,7 @@
+import { useDispatch } from 'react-redux';
 import { Grid, TextField, Button } from '@mui/material';
 import { AuthLayout } from '../layout/AuthLayout.jsx';
 import { useForm } from '../../hooks/useForm.js';
-import { useDispatch } from 'react-redux';
 import { login } from '../../store/slices/auth/authSlice.js';
 
 export const Login = () => {
@@ -12,7 +12,6 @@ export const Login = () => {
     user: '',
     password: ''
   })
-
 
   const onSubmit = ( event ) => {
     event.preventDefault();
@@ -49,17 +48,12 @@ export const Login = () => {
             </Grid>
             <Grid container spacing={ 2 } sx={{ mb:2, mt:2}}>
               <Grid item xs={ 12 } sm={ 6 }>
-                <Button type='submit' variant="contained" fullWidth> Login </Button>
+                <Button type='submit' variant="contained" fullWidth> Iniciar sesión </Button>
               </Grid>
             </Grid>
-
           </Grid>
         </form>
       </AuthLayout>
-
-
-
-
     </>
   );
 }

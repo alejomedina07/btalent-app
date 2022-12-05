@@ -1,6 +1,4 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query';
-// import { getUsers } from '../slices/user/thunks.js';
-
 
 export const userApi = createApi({
 
@@ -17,8 +15,6 @@ export const userApi = createApi({
   }
 
 })
-
-
 
 export const { useGetUsersQuery } = userApi;
 

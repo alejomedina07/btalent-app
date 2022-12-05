@@ -1,10 +1,9 @@
 import { Box, Toolbar } from '@mui/material';
 import { NavBar, SideBar } from './components';
 
+const drawerWidth = 240;
+
 export const AdminLaout = ({ children }) => {
-  const drawerWidth = 240;
-
-
   return (
     <Box sx={{ display: 'flex' }}>
       <NavBar drawerWidth={drawerWidth}/>
@@ -13,7 +12,6 @@ export const AdminLaout = ({ children }) => {
 
       <Box component="main" sx={{ flexGrow: 1, p:3 }}>
         <Toolbar/>
-
         { children }
       </Box>
     </Box>

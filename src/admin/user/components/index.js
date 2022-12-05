@@ -2,4 +2,4 @@
 
 export * from './FormUserComponent'
 export * from './ListUserComponent'
-export * from './_breadcrumbsOptionsUser'
+export * from './breadcrumbs'

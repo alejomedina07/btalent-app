@@ -1,5 +1,4 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
-// import { FormUser, ListUser } from '../user/components/index.js';
 import { UserFormView, UserListView } from '../user/views';
 
 export const AdminRoutes = () => {
